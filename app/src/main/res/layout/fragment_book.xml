@@ -1,0 +1,193 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 android:id="@+id/book_detail"
+                                                 style="?android:attr/textAppearanceLarge"
+                                                 android:textIsSelectable="true"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="wrap_content"
+                                                 tools:context="patel446.maitripatel_assignment1.BookDetailFragment">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.27" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:id="@+id/titleLabel"
+            app:layout_constraintRight_toLeftOf="@+id/guideline"
+            android:layout_marginEnd="31dp"
+            app:layout_constraintBottom_toBottomOf="@+id/titleInput"
+            android:layout_marginBottom="8dp"
+            android:labelFor="@+id/titleInput"/>
+
+        <EditText
+            android:id="@+id/titleInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            tools:text="War and Peace"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="32dp"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline"/>
+
+        <TextView
+            android:id="@+id/authorLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="24dp"
+            android:labelFor="@+id/authorInput"
+            android:text="@string/author"
+            app:layout_constraintRight_toLeftOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/titleLabel" />
+
+        <EditText
+            android:id="@+id/authorInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/titleInput"
+            tools:text="Leo Tolstoy" />
+
+
+        <TextView
+            android:id="@+id/genreLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="28dp"
+            android:labelFor="@+id/genreSpinner"
+            android:text="@string/genre"
+            app:layout_constraintBottom_toBottomOf="@+id/genreSpinner"
+            app:layout_constraintRight_toLeftOf="@+id/guideline" />
+
+        <Spinner
+            android:id="@+id/genreSpinner"
+            android:layout_width="216dp"
+            android:layout_height="27dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:entries="@array/book_genres"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/authorInput" />
+
+        <TextView
+            android:id="@+id/publicationDateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="28dp"
+            android:labelFor="@+id/publicationDateButton"
+            android:text="@string/publication_date"
+            android:textAlignment="textEnd"
+            app:layout_constraintBottom_toBottomOf="@+id/publicationDateButton"
+            app:layout_constraintRight_toLeftOf="@+id/guideline" />
+
+        <Button
+            android:id="@+id/publicationDateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/pick_date"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/genreSpinner" />
+
+        <TextView
+            android:id="@+id/isAvailableLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:labelFor="@+id/isAvailableCheckBox"
+            android:text="@string/is_available"
+            app:layout_constraintBottom_toBottomOf="@+id/isAvailableCheckBox"
+            app:layout_constraintRight_toLeftOf="@+id/guideline" />
+
+        <CheckBox
+            android:id="@+id/isAvailableCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/publicationDateButton" />
+
+        <TextView
+            android:id="@+id/typeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="32dp"
+            android:labelFor="@+id/typeRadioGroup"
+            android:text="@string/type"
+            app:layout_constraintRight_toLeftOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/typeRadioGroup" />
+
+        <RadioGroup
+            android:id="@+id/typeRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/isAvailableCheckBox">
+
+            <RadioButton
+                android:id="@+id/softcoverRb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/softcover" />
+
+            <RadioButton
+                android:id="@+id/hardcoverRb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hardcover" />
+
+        </RadioGroup>
+
+
+        <ImageButton
+            android:id="@+id/book_cover_camera"
+            android:layout_width="66dp"
+            android:layout_height="58dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="24dp"
+            android:src="@android:drawable/ic_menu_camera"
+            app:layout_constraintRight_toLeftOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/typeLabel" />
+
+        <ImageView
+            android:id="@+id/book_cover_view"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="32dp"
+            android:background="@android:color/darker_gray"
+            android:cropToPadding="true"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/typeRadioGroup" />
+
+        <Button
+            android:id="@+id/book_email_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/book_email_text"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="438dp"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/book_cover_view" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

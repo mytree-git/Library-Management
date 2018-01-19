@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Book Database</string>
+    <string name="title_book_detail">Book Detail</string>
+    <string name="title">Title</string>
+    <string name="author">Author</string>
+    <string name="genre">Genre</string>
+    <string name="publication_date">Publication\ndate</string>
+    <string name="pick_date">Pick date</string>
+    <string name="is_available">Is available</string>
+    <string name="type">Type</string>
+    <string name="softcover">Softcover</string>
+    <string name="hardcover">Hardcover</string>
+    <string name="add_book">Add Book</string>
+    <string name="delete_book">Delete Book</string>
+    <string name="date_picker_title">Publication Date:</string>
+    <string name="defaultTitle">Title</string>
+    <string name="book_email_text"> Send this Book details </string>
+    <string name="email_subject"> Book Details </string>
+    <string name="send_email"> Send Via </string>
+    <string name="defaultAuthor">Author</string>
+
+    <string-array name="book_genres">
+        <item>Historical</item>
+        <item>Mystery</item>
+        <item>Action and Adventure</item>
+        <item>Science fiction</item>
+        <item>Satire</item>
+        <item>Drama</item>
+        <item>Romance</item>
+        <item>Horror</item>
+        <item>Self help</item>
+    </string-array>
+
+    <string name="book_available"> This book is available </string>
+    <string name="book_not_available"> This book is not available </string>
+    <string name="no_author"> This book has no author  </string>
+    <string name="book_author">The author of this book is %s.</string>
+
+    <string name="book_details">%1$s!
+    the details of this book are:  %2$s. %3$s, and %4$s
+  </string>
+</resources>
